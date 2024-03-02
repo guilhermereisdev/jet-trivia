@@ -51,6 +51,10 @@ android {
     }
 }
 
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
@@ -66,10 +70,8 @@ dependencies {
     //May need okkhttp also
 
     // Dagger - Hilt
-    kapt("com.google.dagger:hilt-android-compiler:2.39")
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("com.google.dagger:hilt-android:2.51")
+    kapt("com.google.dagger:hilt-compiler:2.51")
 
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
